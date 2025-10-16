@@ -11,17 +11,14 @@
     "license": "MIT",
     "devDependencies": {
         "@types/node": "^20.11.30",
+        "prettier": "^3.6.2",
         "typescript": "^5.4.3"
-    },
-    "publishConfig": {
-        "access": "public",
-        "registry": "https://registry.npmjs.org/"
     },
     "scripts": {
         "build": "sh ./tools/build.sh",
         "prepublish": "npm run build",
-        "patch-version": "yarn version --patch",
-        "npm-publish": "npm run build && npm publish",
-        "upgrade deps": "yarn upgrade-interactive --latest;"
+        "patch-version": "pnpm version --patch",
+        "npm-publish": "pnpm run build && pnpm publish",
+        "upgrade deps": "pnpm upgrade interactive --latest;"
     }
 }
