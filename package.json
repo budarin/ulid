@@ -17,7 +17,7 @@
     "scripts": {
         "build": "sh ./tools/build.sh",
         "prepublish": "npm run build",
-        "patch-version": "pnpm version --patch",
+        "patch-version": "pnpm version patch",
         "pnpm-install": "pnpm install",
         "upgrade deps": "pnpm upgrade -i",
         "npm-publish": "pnpm run build && pnpm publish"
