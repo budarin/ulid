@@ -20,6 +20,6 @@
         "patch-version": "pnpm version patch",
         "pnpm-install": "pnpm install",
         "upgrade deps": "pnpm upgrade -i",
-        "npm-publish": "pnpm run build && pnpm publish"
+        "publish-package": "pnpm build && pnpm publish --access=public"
     }
 }
