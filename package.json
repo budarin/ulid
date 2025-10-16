@@ -18,7 +18,7 @@
         "build": "sh ./tools/build.sh",
         "prepublish": "npm run build",
         "patch-version": "pnpm version --patch",
-        "npm-publish": "pnpm run build && pnpm publish",
-        "upgrade deps": "pnpm upgrade interactive --latest;"
+        "upgrade deps": "pnpm upgrade -i;",
+        "npm-publish": "pnpm run build && pnpm publish"
     }
 }
