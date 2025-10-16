@@ -21,11 +21,18 @@ function getRandomValues(buffer: Uint8Array): Uint8Array {
         (globalThis as any).process.versions.node
     ) {
         try {
-            // Динамический импорт для Node.js
-            const crypto = eval('require')('crypto');
-            const randomBytes = crypto.randomBytes(buffer.length);
-            buffer.set(randomBytes);
-            return buffer;
+            // Безопасный способ получения require в Node.js
+            const requireFn =
+                (globalThis as any).require ||
+                ((globalThis as any).module && (globalThis as any).module.require) ||
+                ((globalThis as any).global && (globalThis as any).global.require);
+
+            if (requireFn) {
+                const crypto = requireFn('crypto');
+                const randomBytes = crypto.randomBytes(buffer.length);
+                buffer.set(randomBytes);
+                return buffer;
+            }
         } catch (e) {
             // Fallback если crypto недоступен
         }
