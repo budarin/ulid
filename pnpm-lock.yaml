@@ -4,17 +4,15 @@ settings:
   autoInstallPeers: true
   excludeLinksFromLockfile: false
 
-dependencies:
-  prettier:
-    specifier: ^3.6.2
-    version: 3.6.2
-
 devDependencies:
   '@types/node':
     specifier: ^20.11.30
     version: 20.19.21
+  prettier:
+    specifier: ^3.6.2
+    version: 3.6.2
   typescript:
-    specifier: ^5.4.3
+    specifier: ^5.9.3
     version: 5.9.3
 
 packages:
@@ -29,7 +27,7 @@ packages:
     resolution: {integrity: sha512-I7AIg5boAr5R0FFtJ6rCfD+LFsWHp81dolrFD8S79U9tb8Az2nGrJncnMSnys+bpQJfRUzqs9hnA81OAA3hCuQ==}
     engines: {node: '>=14'}
     hasBin: true
-    dev: false
+    dev: true
 
   /typescript@5.9.3:
     resolution: {integrity: sha512-jl1vZzPDinLr9eUt3J/t7V6FgNEw9QjvBPdysz9KfQDD41fQrC2Y4vKQdiaUpFT4bXlb1RHhLpp8wtm6M5TgSw==}
